@@ -1,0 +1,322 @@
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #64ffda;
+  margin: 0.75rem auto 0;
+}
+
+.empty-message {
+  text-align: center;
+  color: #606060;
+  font-style: italic;
+}
+
+/* About */
+.about-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #a0a0a0;
+  line-height: 1.8;
+}
+
+.about-details {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-details strong {
+  color: #64ffda;
+}
+
+/* Skills */
+.skill-category {
+  margin-bottom: 2.5rem;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  color: #64ffda;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.skill-item {
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  color: #e0e0e0;
+}
+
+.skill-percent {
+  color: #64ffda;
+  font-size: 0.85rem;
+}
+
+.skill-bar {
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #64ffda;
+  border-radius: 2px;
+  transition: width 1s ease;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #1a1a1a;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #333;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #64ffda;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #1a1a1a;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.35rem;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #64ffda;
+}
+
+.timeline-content h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.timeline-content h4 {
+  font-size: 0.95rem;
+  color: #64ffda;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Achievements */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+}
+
+.achievement-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-date {
+  color: #606060;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.achievement-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #64ffda;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+/* Contact */
+.contact-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+
+.contact-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contact-social a {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  transition: color 0.3s;
+}
+
+.contact-social a:hover {
+  color: #64ffda;
+}
