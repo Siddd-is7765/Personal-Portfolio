@@ -108,9 +108,28 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 ## Deployment
 
-- **Frontend**: Vercel / Netlify
-- **Backend**: Render / Railway
-- **Database**: MongoDB Atlas
+### Frontend — GitHub Pages (Automatic)
+
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the React client to GitHub Pages on every push to `main`.
+
+**Setup steps:**
+
+1. Go to your repository **Settings → Pages**.
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
+3. *(Optional)* If your backend is already deployed, go to **Settings → Secrets and variables → Actions → Variables** and add a repository variable:
+   - **Name**: `REACT_APP_API_URL`
+   - **Value**: Your deployed backend URL (e.g., `https://your-api.onrender.com/api`)
+4. Push to `main` (or trigger the workflow manually from the **Actions** tab) — the site will be live at `https://<username>.github.io/<repo-name>/` (or `https://<username>.github.io/` if the repository is named `<username>.github.io`).
+
+### Backend — Render / Railway
+
+1. Deploy the `server/` directory to [Render](https://render.com) or [Railway](https://railway.app).
+2. Set the environment variables (`MONGO_URI`, `JWT_SECRET`, `PORT`) on your hosting platform.
+3. Update the `REACT_APP_API_URL` GitHub Actions variable to point to your deployed backend.
+
+### Database — MongoDB Atlas
+
+Use [MongoDB Atlas](https://www.mongodb.com/atlas) for a free cloud-hosted MongoDB instance and set the connection string as `MONGO_URI` on your backend host.
 
 ## Tech Stack
 
