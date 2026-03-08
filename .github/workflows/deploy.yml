@@ -41,10 +41,11 @@ jobs:
       - name: Copy index.html to 404.html for SPA routing
         run: cp build/index.html build/404.html
 
+      # IMPORTANT: upload 'build' (not client/build) when working-directory is ./client
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: client/build
+          path: build
 
   deploy:
     environment:
