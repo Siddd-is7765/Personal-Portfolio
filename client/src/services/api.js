@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// Recommended: set REACT_APP_API_URL as a repository Actions variable.
+// Fallback below points to your Render backend so the deployed frontend works even if the variable is missing.
 const API_URL = process.env.REACT_APP_API_URL || 'https://personal-portfolio-api-7ln9.onrender.com/api';
 
 const api = axios.create({
