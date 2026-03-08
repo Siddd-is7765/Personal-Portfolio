@@ -8,13 +8,22 @@ dotenv.config();
 
 const app = express();
 
+// Trust proxy (required for Render / reverse proxy deployments)
+app.set('trust proxy', 1);
+
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://siddd-is7765.github.io',
+    'http://localhost:3000'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Rate limiting
 const apiLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000,
   max: 100,
   standardHeaders: true,
   legacyHeaders: false,
