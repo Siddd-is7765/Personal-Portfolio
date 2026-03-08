@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 function App() {
   return (
     <AuthProvider>
+      {/* IMPORTANT: basename set for GitHub Pages project site */}
       <Router basename="/Personal-Portfolio">
         <Routes>
           <Route path="/" element={<Portfolio />} />
