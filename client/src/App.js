@@ -7,10 +7,13 @@ import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
+  // Use the PUBLIC_URL set by Create React App at build time for GitHub Pages.
+  // Fall back to '/' during local development or when PUBLIC_URL is empty.
+  const basename = process.env.PUBLIC_URL || '/';
+
   return (
     <AuthProvider>
-      {/* IMPORTANT: basename set for GitHub Pages project site */}
-      <Router basename="/Personal-Portfolio">
+      <Router basename={basename}>
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/admin-login" element={<AdminLogin />} />
