@@ -14,7 +14,7 @@ app.set('trust proxy', 1);
 // Middleware
 app.use(cors({
   origin: [
-    'https://siddd-is7765.github.io',
+    'https://siddd-is7765.github.io/Personal-Portfolio/',
     'http://localhost:3000'
   ],
   credentials: true
